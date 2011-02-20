@@ -50,8 +50,8 @@
 		8DD76F7E0486A8DE00D96B5E /* TheApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E970290921104C91782 /* TheApp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TheApp.1; sourceTree = "<group>"; };
 		F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SomeLibrary.xcodeproj; path = ../SomeLibrary/SomeLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
-		F9CD03EA13113E5B00513346 /* libSomeLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSomeLibrary.a; path = /Users/slava/Projects/DependencySample/SomeLibrary/build/Debug/libSomeLibrary.a; sourceTree = "<absolute>"; };
-		F9CD03EC13113E7F00513346 /* libSomeLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSomeLibrary.a; path = /Users/slava/Projects/DependencySample/SomeLibrary/build/Release/libSomeLibrary.a; sourceTree = "<absolute>"; };
+		F9CD03EA13113E5B00513346 /* libSomeLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSomeLibrary.a; path = ../SomeLibrary/build/Debug/libSomeLibrary.a; sourceTree = SOURCE_ROOT; };
+		F9CD03EC13113E7F00513346 /* libSomeLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSomeLibrary.a; path = ../SomeLibrary/build/Release/libSomeLibrary.a; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
