@@ -10,6 +10,8 @@
 		8DD76F770486A8DE00D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 		8DD76F790486A8DE00D96B5E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */; };
 		8DD76F7C0486A8DE00D96B5E /* TheApp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E970290921104C91782 /* TheApp.1 */; };
+		F9CD03EB13113E5B00513346 /* libSomeLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CD03EA13113E5B00513346 /* libSomeLibrary.a */; };
+		F9CD03ED13113E7F00513346 /* libSomeLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CD03EC13113E7F00513346 /* libSomeLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17,14 +19,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libSomeLibrary.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = SomeLibrary;
 		};
 		F9CD03041311327C00513346 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SomeLibrary */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = SomeLibrary;
 		};
 /* End PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		8DD76F7E0486A8DE00D96B5E /* TheApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E970290921104C91782 /* TheApp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TheApp.1; sourceTree = "<group>"; };
 		F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SomeLibrary.xcodeproj; path = ../SomeLibrary/SomeLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F9CD03EA13113E5B00513346 /* libSomeLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSomeLibrary.a; path = /Users/slava/Projects/DependencySample/SomeLibrary/build/Debug/libSomeLibrary.a; sourceTree = "<absolute>"; };
+		F9CD03EC13113E7F00513346 /* libSomeLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSomeLibrary.a; path = /Users/slava/Projects/DependencySample/SomeLibrary/build/Release/libSomeLibrary.a; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F790486A8DE00D96B5E /* CoreFoundation.framework in Frameworks */,
+				F9CD03EB13113E5B00513346 /* libSomeLibrary.a in Frameworks */,
+				F9CD03ED13113E7F00513346 /* libSomeLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +76,8 @@
 				C6859E96029091FE04C91782 /* Documentation */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				19C28FBDFE9D53C911CA2CBB /* Products */,
+				F9CD03EA13113E5B00513346 /* libSomeLibrary.a */,
+				F9CD03EC13113E7F00513346 /* libSomeLibrary.a */,
 			);
 			name = TheApp;
 			sourceTree = "<group>";
@@ -206,6 +214,11 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SomeLibrary/build/Debug\"",
+					"\"$(SRCROOT)/../SomeLibrary/build/Release\"",
+				);
 				PRODUCT_NAME = TheApp;
 			};
 			name = Debug;
@@ -217,6 +230,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SomeLibrary/build/Debug\"",
+					"\"$(SRCROOT)/../SomeLibrary/build/Release\"",
+				);
 				PRODUCT_NAME = TheApp;
 			};
 			name = Release;
