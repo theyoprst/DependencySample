@@ -12,6 +12,23 @@
 		8DD76F7C0486A8DE00D96B5E /* TheApp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E970290921104C91782 /* TheApp.1 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F9CD02B81311318700513346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libSomeLibrary.a */;
+			remoteInfo = SomeLibrary;
+		};
+		F9CD03041311327C00513346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* SomeLibrary */;
+			remoteInfo = SomeLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		8DD76F7B0486A8DE00D96B5E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -30,6 +47,7 @@
 		09AB6884FE841BABC02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		8DD76F7E0486A8DE00D96B5E /* TheApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859E970290921104C91782 /* TheApp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TheApp.1; sourceTree = "<group>"; };
+		F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SomeLibrary.xcodeproj; path = ../SomeLibrary/SomeLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,7 @@
 		08FB7794FE84155DC02AAC07 /* TheApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859E96029091FE04C91782 /* Documentation */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
@@ -87,6 +106,14 @@
 			name = Documentation;
 			sourceTree = "<group>";
 		};
+		F9CD02B51311318700513346 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9CD02B91311318700513346 /* libSomeLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +128,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F9CD03051311327C00513346 /* PBXTargetDependency */,
 			);
 			name = TheApp;
 			productInstallPath = "$(HOME)/bin";
@@ -125,12 +153,28 @@
 			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* TheApp */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F9CD02B51311318700513346 /* Products */;
+					ProjectRef = F9CD02B41311318700513346 /* SomeLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8DD76F740486A8DE00D96B5E /* TheApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F9CD02B91311318700513346 /* libSomeLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSomeLibrary.a;
+			remoteRef = F9CD02B81311318700513346 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DD76F760486A8DE00D96B5E /* Sources */ = {
@@ -142,6 +186,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9CD03051311327C00513346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SomeLibrary;
+			targetProxy = F9CD03041311327C00513346 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB924808733DCA0010E9CD /* Debug */ = {
@@ -195,6 +247,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../SomeLibrary/include;
 				LIBRARY_SEARCH_PATHS = ../SomeLibrary/build/Release;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lSomeLibrary";
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
